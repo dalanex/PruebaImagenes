@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,23 @@ namespace PruebaImagenes
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        MySqlConnection connection;
+
+        public Form1(MySqlConnection connection)
         {
+            this.connection = connection;
+            MySqlCommand comm = new MySqlCommand("SELECT * FROM inmueble", connection);
             InitializeComponent();
+
+            connection.Open();
+
+            MySqlDataReader reader = comm.ExecuteReader();
+
+            while (reader.Read())
+            {
+                textBox1.Text += reader["descripcion"].ToString();
+                textBox1.Text += "\r\n";
+            }
         }
     }
 }
