@@ -12,7 +12,7 @@ namespace PruebaImagenes
     {
         public static MySqlConnection conexion()
         {
-            string servidor = "192.168.77.40";
+            string servidor = ""; //insertar ip de la base de datos
             string bd = "psw_2021";
             string usuario = "remoto";
             string password = "";
