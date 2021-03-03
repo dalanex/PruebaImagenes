@@ -29,33 +29,78 @@ namespace PruebaImagenes
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.selectImageButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadImageButton = new System.Windows.Forms.Button();
+            this.clearImageButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // openFileDialog1
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 100);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 228);
-            this.textBox1.TabIndex = 0;
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // selectImageButton
+            // 
+            this.selectImageButton.Location = new System.Drawing.Point(325, 378);
+            this.selectImageButton.Name = "selectImageButton";
+            this.selectImageButton.Size = new System.Drawing.Size(137, 23);
+            this.selectImageButton.TabIndex = 1;
+            this.selectImageButton.Text = "ELEGIR IMAGEN";
+            this.selectImageButton.UseVisualStyleBackColor = true;
+            this.selectImageButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(195, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(419, 282);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // loadImageButton
+            // 
+            this.loadImageButton.Location = new System.Drawing.Point(525, 378);
+            this.loadImageButton.Name = "loadImageButton";
+            this.loadImageButton.Size = new System.Drawing.Size(137, 23);
+            this.loadImageButton.TabIndex = 3;
+            this.loadImageButton.Text = "CARGAR IMAGEN";
+            this.loadImageButton.UseVisualStyleBackColor = true;
+            this.loadImageButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // clearImageButton
+            // 
+            this.clearImageButton.Location = new System.Drawing.Point(123, 378);
+            this.clearImageButton.Name = "clearImageButton";
+            this.clearImageButton.Size = new System.Drawing.Size(137, 23);
+            this.clearImageButton.TabIndex = 4;
+            this.clearImageButton.Text = "LIMPIAR IMAGEN";
+            this.clearImageButton.UseVisualStyleBackColor = true;
+            this.clearImageButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.clearImageButton);
+            this.Controls.Add(this.loadImageButton);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.selectImageButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button selectImageButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button loadImageButton;
+        private System.Windows.Forms.Button clearImageButton;
     }
 }
 
