@@ -54,9 +54,9 @@ namespace PruebaImagenes
         {
             connection.Open();
             byte[] res = null;
-            MySqlCommand command = new MySqlCommand("SELECT foto FROM contiene WHERE id_contiene = 4", connection);
+            MySqlCommand command = new MySqlCommand("SELECT foto FROM contiene WHERE id_contiene = 2", connection);
             MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            while (reader.Read())   //por si guardo en una lista de fotos
             {
                 res = (byte[])reader["foto"];
             }

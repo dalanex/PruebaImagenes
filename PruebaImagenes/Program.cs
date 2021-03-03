@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace PruebaImagenes
         [STAThread]
         static void Main()
         {
-            MySqlConnection connection = Conexion.conexion();
+            MySql.Data.MySqlClient.MySqlConnection connection = Conexion.conexion();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(connection));
